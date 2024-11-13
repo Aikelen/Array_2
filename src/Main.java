@@ -1,10 +1,13 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         //1
         int[] wastes = {52_000, 55_000, 45_000, 65_000, 66_000};
         for (int i = 0; i<wastes.length;i++){
-            System.out.println("1)Сумма трат за месяц составила "+ wastes[i] +" рублей");
+            System.out.println("1)Сумма трат за "+ (i+1) +" месяц составила "+ wastes[i] +" рублей");
         }
+        System.out.println("1) Всего было потрачено "+Arrays.stream(wastes).sum());
         System.out.println();
 
         //2
@@ -29,24 +32,23 @@ public class Main {
         System.out.println();
         //3
 
-        float AvarageValue;
-        int sum=0;
+        double AvarageValue;
+        double sum=0;
         for (int i=0; i<wastes.length;i++){
             sum += wastes[i];
         }
+        sum += 111_111.10;
         AvarageValue = sum / wastes.length;
         System.out.println("3) Средняя сумма трат за месяц составила "+AvarageValue+" рублей");
 
         //4
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I' };
+        for (int i = reverseFullName.length - 1;i>=0;i--){
+            System.out.print(reverseFullName[i]);
 
-        // Разворачиваем массив
-        for (int i = 0; i < reverseFullName.length / 2; i++) {
-            char temp = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
-            reverseFullName[reverseFullName.length - 1 - i] = temp;
+
         }
-        System.out.println(reverseFullName);
+
 
     }
 }
