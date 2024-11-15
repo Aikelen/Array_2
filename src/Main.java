@@ -10,12 +10,12 @@ public class Main {
             Sum += wastes[i];
 
         }
-        System.out.println("1) Всего было потрачено "+Sum);
+        System.out.println("1) Всего было потрачено "+Sum);//помениял
         System.out.println();
 
         //2
-        int MaxSalary = 0, MinSalary = wastes[0];
-        for (int i = 0; i<wastes.length;i++){
+        int MaxSalary = 0, MinSalary = wastes[0];//помениял
+        for (int i = 0; i<wastes.length;i++){//помениял
             if (MaxSalary < wastes[i] ){
                 MaxSalary = wastes[i];
 
